@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./includes/_head"); %>
+</html>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="https://i.postimg.cc/mg4rWBmv/logo.png" alt="">
+            </div>
+            <ul class="nav-area">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">signup</a></li>
+            </ul>
+        </div>
+        
+        <div class="welcome-text">
+            <table style="color: bisque;">
+                <tr>
+                  <th>Sign-up with email verification.</th>
+                  <th>Stateless authentication using JWT.</th>
+                  <th>Users can create a check to monitor a given URL if it is up or down.</th>
+                </tr>
+                <tr>
+                  <td>Users can edit, pause, or delete their checks if needed.</td>
+                  <td>Users may receive a notification on a webhook URL by sending HTTP POST request whenever a check goes down or up.</td>
+                  <td>Users should receive email alerts whenever a check goes down or up.</td>
+                </tr>
+                <tr>
+                  <td>Users can get detailed uptime reports about their checks availability, average response time, and total uptime/downtime.</td>
+                  <td>Francisco Chang</td>
+                  <td>Users can group their checks by tags and get reports by tag.</td>
+                </tr>
+              </table>
+        </div>
+    </header>
+   
+</body>

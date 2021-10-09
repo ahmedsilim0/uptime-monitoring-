@@ -1,0 +1,18 @@
+@import "_home.css";
+@import "_login.css";
+@import "_form.css";
+body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    text-align: center;
+    margin: 0 auto auto;
+    max-width: 800px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }

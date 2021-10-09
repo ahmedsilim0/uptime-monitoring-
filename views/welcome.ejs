@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./includes/_head"); %>
+</html>
+<body style="overflow: scroll;">
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="https://i.postimg.cc/mg4rWBmv/logo.png" alt="">
+            </div>
+            <ul class="nav-area">
+                <li><a href="#">welcome</a></li>
+                <li><a href="/welcome">Home</a></li>
+                <li><a href="/dashboard">DashBoard</a></li>
+                <li><a href="/logout">Logout</a></li>
+                
+            </ul>
+        </div>
+        <div class="welcome-text">
+            <form method="post">
+                <input type="text" name="name" placeholder="check-name" required="required" />
+                <input type="url"  name="url" placeholder="URL" required="required" />
+                <input type="text" name="protocol" placeholder="HTTP HTTPS or TCP" required="required" />
+                <input type="text" name="path" placeholder="path" />
+                <input type="text" name="port" placeholder="port"/>
+                <input type="text" name="webhook" placeholder="webhook" />
+                <input type="text" name="timeout" placeholder="timeout" />
+                <input type="text" name="interval" placeholder="interval" />
+                <input type="text" name="threshold" placeholder="threshold"/>
+                <input type="text" name="authentication" placeholder="authentication"/>
+                <input type="text" name="httpHeaders" placeholder="httpHeaders"/>
+                <input type="text" name="assert" placeholder="assert optional" />
+                <input type="text" name="tags" placeholder="tags"/>
+                <input type="text" name="ignoreSSL" placeholder="ignoreSSL" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Check.</button>
+            </form>
+        </div>
+    </header>
+   
+</body>
