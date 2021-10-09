@@ -7,9 +7,9 @@ To get the Node server running:
 - `Download Node.js` [here](https://nodejs.org/en/download/)
 - `npm install` to install all required dependencies
 - Install MongoDB [instructions](https://docs.mongodb.com/manual/installation/#tutorials)
-- for your .env file
-  -DB_CONNECT= your db link
-  -TOKEN_SECRET= your secret token
+- for your .env
+    - DB_CONNECT="your mongodb link"
+    - TOKEN_SECRET="your secret token"
  
  # Project Overview
 - `app.js` - The entry point to the application. This file defines our express server, requires the routers and some middlewares.
@@ -19,6 +19,7 @@ To get the Node server running:
 - `controllers/` - This folder contains main controllers.
 - `public/` - This folder contains main styles .
 - `models/` - This folder contains the data models.
+- `views/` - This folder contains the front end(Embedded JavaScript templating).
 
 ## Dependencies
 
