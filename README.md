@@ -1,32 +1,40 @@
 #  [NodeJS Uptime Monitoring ](#)
-> This app Performs to allows users to view and bid on pets.
+> This app Performs to allows authorized users to enter URLs they want monitored, and get detailed uptime reports about their availability, average response time, and total uptime/downtime.
 
 # Setting things #
 
 To get the Node server running:
 - `Download Node.js` [here](https://nodejs.org/en/download/)
 - `npm install` to install all required dependencies
--  Use MongoDb cloud 
+- Install MongoDB [instructions](https://docs.mongodb.com/manual/installation/#tutorials)
 - for your .env
-    - MONGO_DB_URI="your mongodb link"
-    - PORT=2022 "or any port you want"
+    - DB_CONNECT="your mongodb link"
+    - TOKEN_SECRET="your secret token"
  
  # Project Overview
-- `index.js` - The entry point to the application.
-- `startups` - Contain all files that we need to start with (mongoconnectino , all routes ,...).
-- `routes` - Folder contains seperate apis.
-- `contorllers` - Folder that have all connections between routes and servcies .
-- `services` - This folder contains main core functions.
-- `models` - This folder contains the data models (mysql model - mongodb model)
-- `middleware` - This folder contains all authorizations.
-- `validators` - This folder contains validation for the api to check data first in routing  before inserting or working with the db using service .
-- `utils` - This folder contians all reusable (funcitons - constant)
-- `helper` - Folder created for only helping me to create so users and pets
+- `app.js` - The entry point to the application. This file defines our express server, requires the routers and some middlewares.
+- `validation` - to validate the user accounts.
+- `verfiyToken` -to verfiy user's token .
+- `routes/` - Folder contains the route definitions for the app.
+- `controllers/` - This folder contains main controllers.
+- `public/` - This folder contains main styles .
+- `models/` - This folder contains the data models.
+- `views/` - This folder contains the front end(Embedded JavaScript templating).
 
 ## Dependencies
 
 ```json
 [
-   "express", "body-parser", "joi", "custom-env","mongoose", "nodemon"
+    "dotenv", "express", "express-jwt", "joi", "jsonwebtoken","ping-monitor", "md5", "mongodb", "morgan", "path" ,"cookie-parser"
 ]
 ```
+- [express](https://github.com/expressjs/express) - The server for handling and routing requests
+- [mongodb](https://www.npmjs.com/package/mongodb) - The official MongoDB driver for Node.js. 
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - For generating JWTs used by authentication
+- [ping-monitor](https://www.npmjs.com/package/ping-monitor) -An uptime event emitter for http and tcp servers.
+- [express-jwt](https://github.com/auth0/express-jwt) - Middleware for validating JWTs for authentication
+- [Joi](https://github.com/sideway/joi) - A schema description language and data validator for JS.
+- [dotenv](https://github.com/motdotla/dotenv) - A module to load environment variables from a .env file into process.env
+- [morgan](https://github.com/expressjs/morgan#readme) - Request logger middleware
+- [path](https://www.npmjs.com/package/path) - This is an exact copy of the NodeJS ’path’ module published to the NPM registry.
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser)
